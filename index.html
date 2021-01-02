@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>boid</title>
+
+  <!-- https://jp.vuejs.org/v2/guide/installation.html -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+  <!-- https://p5js.org/download/ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div id="app">
+
+    <div class="main">
+      <div id="p5canvas-wrapper"></div>
+    </div>
+
+    <div class="side">
+      <span class="title">boid simulation</span>
+      <span>{{ boids.length }} boids.</span>
+      <button @click="debug ^= true">debug</button>
+      <button @click="isLooping() ? noLoop() : loop()">pause / restart</button>
+      <label><input type="checkbox" v-model="Separation">Separation</label>
+      <label><input type="checkbox" v-model="Alignment" >Alignment </label>
+      <label><input type="checkbox" v-model="Cohesion"  >Cohesion  </label>
+      <label><input type="checkbox" v-model="Convection">Convection</label>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>

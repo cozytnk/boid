@@ -1,0 +1,48 @@
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%; height: 100vh;
+  padding: 0; margin: 0;
+  overflow: hidden;
+}
+
+#app {
+  width: 100%; height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 100%) 200px;
+  grid-template-rows: minmax(0, 100%);
+  font-size: 16px;
+  color: #222;
+}
+.main {
+  /* background-color: #fff; */
+  /* border: 2px solid red; */
+  padding: 12px;
+  padding-bottom: 12px;
+}
+.side {
+  background-color: #ddd;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: auto;
+}
+
+.main > #p5canvas-wrapper {
+  width: 100%;
+  height: 100%;
+  /* background-color: antiquewhite; */
+  border: 2px solid cornflowerblue;
+}
+
+.side > .title {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-bottom: 24px;
+}
+.side > input[type="search"] {
+  width: 100%;
+}
